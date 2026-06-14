@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     title: "Shibashis Mondal | Electrical Engineer",
     description:
       "Electrical Engineer with expertise in MEP project execution and electrical reliability.",
-    url: "https://shibashis.in",
   },
 };
 
