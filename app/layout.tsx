@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shibashis Mondal" }],
   metadataBase: new URL("https://shibashis.in"),
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Shibashis Mondal | Electrical Engineer, MEP Project Execution",
     description:
