@@ -1,0 +1,51 @@
+Build a professional personal portfolio website for [Your Name], a [Your Role], using Next.js 14 (App Router) and TypeScript.
+
+TECH STACK
+- Framework: Next.js 14 with App Router
+- Styling: Tailwind CSS v3
+- Animations: Framer Motion scroll animations
+- Icons: Lucide React
+- Fonts: Next/font with Inter (body) + a display font for headings
+- Deployment-ready for Vercel
+
+DESIGN DIRECTION
+Style: Minimalist clean
+- Dark/light mode toggle with next-themes
+- Fully responsive (mobile-first)
+- Accessible — semantic HTML, ARIA labels, keyboard navigable
+- Smooth scrolling with active nav link highlighting
+- Custom cursor or subtle scroll progress indicator
+
+PAGES & SECTIONS
+Build a single-page layout with these sections: Hero, About, Projects, Skills, Contact
+
+SECTION SPECS
+Hero — Full-viewport section with animated greeting, name ([Your Name]), title ([Your Role]), a short tagline, CTA buttons (View Work, Download CV), and social links (GitHub, LinkedIn, Email)
+
+About — Two-column layout: professional photo placeholder on left, bio text + quick stats (years of experience, projects completed, etc.) on right
+
+Projects — Responsive grid of project cards. Each card: project image, title, description, tech stack badges, and links (Live Demo, GitHub). Include a category filter bar.
+
+Skills — Animated skill grid or progress bars grouped by category (Frontend, Backend, Tools, etc.)
+
+Contact — Minimal contact form (name, email, message) with validation + direct contact links. No backend needed — use a mailto fallback or note where to wire up Resend/EmailJS.
+
+Experience (if included) — Vertical timeline with company, role, dates, and bullet achievements
+
+COMPONENT STRUCTURE
+- /app/layout.tsx — root layout with providers
+- /app/page.tsx — main page importing all sections
+- /components/ui/ — Button, Badge, Card, NavLink
+- /components/sections/ — one file per section
+- /components/ThemeToggle.tsx
+- /lib/data.ts — all portfolio content as typed TS constants (easy to edit)
+- /public/images/ — placeholder image paths noted in comments
+
+CODE QUALITY
+- All data (projects, skills, links) lives in /lib/data.ts — never hardcoded inline
+- Full TypeScript — no any types
+- Clean component props with interfaces
+- README with setup instructions and how to customize content
+
+OUTPUT
+Generate the complete file tree and full code for every file. Start with /lib/data.ts so content is easy to swap, then layout.tsx, then each section component, then the page.
