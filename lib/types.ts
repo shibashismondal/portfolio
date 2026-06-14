@@ -7,8 +7,8 @@ export interface PersonalInfo {
   location: string;
   availableForWork: boolean;
   socialLinks: {
-    github: string;
     linkedin: string;
+    instagram: string;
   };
 }
 
