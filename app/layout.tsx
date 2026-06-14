@@ -31,11 +31,21 @@ export const metadata: Metadata = {
     "Electrical Maintenance",
   ],
   authors: [{ name: "Shibashis Mondal" }],
+  metadataBase: new URL("https://shibashis.in"),
   openGraph: {
     title: "Shibashis Mondal | Electrical Engineer, MEP Project Execution",
     description:
       "Electrical Engineer with expertise in MEP project execution, power distribution systems, and electrical reliability.",
+    url: "https://shibashis.in",
+    siteName: "Shibashis Mondal Portfolio",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shibashis Mondal | Electrical Engineer",
+    description:
+      "Electrical Engineer with expertise in MEP project execution and electrical reliability.",
+    url: "https://shibashis.in",
   },
 };
 
