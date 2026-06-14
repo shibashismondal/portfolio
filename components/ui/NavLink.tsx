@@ -27,9 +27,6 @@ export default function NavLink({
         }`}
     >
       {children}
-      {isActive && (
-        <span className="absolute bottom-1 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full" />
-      )}
     </Link>
   );
 }
