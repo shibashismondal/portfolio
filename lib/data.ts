@@ -20,8 +20,8 @@ Skilled in electrical project execution, commissioning, preventive maintenance, 
   location: "Kolkata, West Bengal",
   availableForWork: true,
   socialLinks: {
-    github: "",
     linkedin: "https://www.linkedin.com/in/shibashismondal/",
+    instagram: "https://www.instagram.com/bijlee_wale_sahab/",
   },
 };
 

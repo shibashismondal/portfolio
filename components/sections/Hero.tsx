@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { Linkedin, Instagram, Mail, Download, ArrowDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { personalInfo, cvFilePath } from "@/lib/data";
 
@@ -149,6 +149,17 @@ export default function Hero() {
               aria-label="LinkedIn Profile"
             >
               <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href={personalInfo.socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600
+                dark:text-slate-400 hover:bg-blue-100 dark:hover:bg-blue-900/30
+                hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              aria-label="Instagram Profile"
+            >
+              <Instagram className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}

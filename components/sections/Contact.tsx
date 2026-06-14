@@ -2,7 +2,7 @@
 
 import { useState, useRef, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Linkedin, Github, Send, MapPin, CheckCircle } from "lucide-react";
+import { Mail, Linkedin, Instagram, Send, MapPin, CheckCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { personalInfo } from "@/lib/data";
 
@@ -148,19 +148,19 @@ export default function Contact() {
               </a>
 
               <a
-                href={personalInfo.socialLinks.github}
+                href={personalInfo.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800
                   hover:shadow-md transition-shadow group"
               >
                 <div className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <Github className="w-5 h-5" />
+                  <Instagram className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">GitHub</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Instagram</p>
                   <p className="font-medium text-slate-900 dark:text-white">
-                    View my repositories
+                    @bijlee_wale_sahab
                   </p>
                 </div>
               </a>

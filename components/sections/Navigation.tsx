@@ -73,7 +73,7 @@ export default function Navigation() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex md:hidden items-center gap-2">
+            <div className="flex md:hidden items-center gap-3">
               <ThemeToggle />
               <button
                 onClick={() => setIsOpen(!isOpen)}
