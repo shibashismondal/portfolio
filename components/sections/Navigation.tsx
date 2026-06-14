@@ -50,7 +50,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a
-              href="#"
+              href="https://shibashis.in"
               className="text-xl font-display font-bold text-slate-900 dark:text-white
                 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >

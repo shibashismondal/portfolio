@@ -180,6 +180,7 @@ export const experiences: Experience[] = [
       "Monitoring execution quality, safety compliance, work progress, and project coordination activities at site",
     ],
     technologies: ["MEP Coordination", "Cold Storage", "Electrical Expansion", "SAP"],
+    logo: "/images/logos/bureau-veritas.png",
   },
   {
     id: "2",
@@ -195,6 +196,7 @@ export const experiences: Experience[] = [
       "Managed spare inventory and procurement using SAP MM module",
     ],
     technologies: ["Metro Rail", "HT/LT Systems", "SAP MM", "AutoCAD", "Electrical Safety"],
+    logo: "/images/logos/afcons.png",
   },
 ];
 

@@ -50,6 +50,7 @@ export interface Experience {
   endDate: string;
   description: string[];
   technologies: string[];
+  logo?: string;
 }
 
 export interface Education {
