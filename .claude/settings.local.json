@@ -4,5 +4,17 @@
     "ANTHROPIC_MODEL": "minimax-m2.7",
     "ANTHROPIC_API_KEY": "sk-o1F9Z11YDrESXNB1V5U1AF2l0Z6Otp1n5t0v6OzPnmxIDWIr8wm0TxOn5nq9cAiy",
     "ENABLE_TOOL_SEARCH": "true"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npx sanity *)",
+      "Bash(pkill -f \"next\")",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(cat /private/tmp/claude-501/-Users-rudra-Desktop-shibashis-50fdf679-436c-4c8e-955c-f60acc157fae/tasks/bkh3hu7n4.output)",
+      "Read(//private/tmp/claude-501/-Users-rudra-Desktop-shibashis-50fdf679-436c-4c8e-955c-f60acc157fae/tasks/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333)",
+      "Bash(npm install *)"
+    ]
   }
 }

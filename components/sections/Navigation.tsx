@@ -16,7 +16,9 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = navLinks.map((link) => link.href.replace("#", ""));
+      const sections = navLinks
+        .map((link) => link.href.replace("/#", "").replace("#", ""))
+        .filter((href) => href !== "/blog");
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element && window.scrollY >= element.offsetTop - 100) {
