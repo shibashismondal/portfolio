@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
+  baseRouterCtx: (ctx) => ctx,
   name: 'default',
   title: 'website',
 
