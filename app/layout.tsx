@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navigation from "@/components/sections/Navigation";
 import Footer from "@/components/sections/Footer";
@@ -70,6 +71,7 @@ export default function RootLayout({
           <Navigation />
           <main id="main-content">{children}</main>
           <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
