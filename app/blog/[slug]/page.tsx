@@ -7,11 +7,12 @@ import { getBlogPost } from "@/sanity/client";
 export const dynamic = "force-dynamic";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
 
   return {
@@ -51,7 +52,8 @@ function renderBody(body: any[]) {
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
 
   if (!post) {
     notFound();
