@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden
-        bg-slate-50 dark:bg-slate-950"
+        bg-slate-50 dark:bg-slate-950 py-8 sm:py-12"
     >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -77,7 +77,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-2 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -86,7 +86,7 @@ export default function Hero() {
         >
           {/* Profile Image */}
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+            <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
               <Image
                 src="/images/profile.jpg"
                 alt={personalInfo.name}
@@ -128,7 +128,7 @@ export default function Hero() {
           {/* Tagline */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-slate-600 dark:text-slate-400
+            className="text-base sm:text-lg text-slate-600 dark:text-slate-400
               max-w-2xl mx-auto mb-8"
           >
             {personalInfo.tagline}
@@ -185,25 +185,25 @@ export default function Hero() {
               <Mail className="w-6 h-6" />
             </a>
           </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="w-6 h-10 rounded-full border-2 border-slate-400 dark:border-slate-600
+                flex justify-center items-center mt-8"
+            >
+              <motion.div className="w-1.5 h-3 bg-slate-400 dark:bg-slate-600 rounded-full" />
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-slate-400 dark:border-slate-600
-            flex justify-center pt-2"
-        >
-          <motion.div className="w-1.5 h-3 bg-slate-400 dark:bg-slate-600 rounded-full" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
