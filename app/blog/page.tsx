@@ -77,7 +77,7 @@ export default async function BlogPage() {
                 </p>
 
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/blog/${encodeURIComponent(post.slug || "")}`}
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400
                     font-medium hover:gap-3 transition-all"
                 >

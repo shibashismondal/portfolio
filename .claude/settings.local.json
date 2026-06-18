@@ -14,7 +14,14 @@
       "Bash(cat /private/tmp/claude-501/-Users-rudra-Desktop-shibashis-50fdf679-436c-4c8e-955c-f60acc157fae/tasks/bkh3hu7n4.output)",
       "Read(//private/tmp/claude-501/-Users-rudra-Desktop-shibashis-50fdf679-436c-4c8e-955c-f60acc157fae/tasks/**)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(rm -rf .next)",
+      "Bash(curl -v \"http://localhost:3000/blog/test\")",
+      "Bash(curl -s http://localhost:3000/blog)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:3000/blog/Vibe%20Coding\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }

@@ -23,6 +23,8 @@ export async function getBlogPosts() {
 }
 
 export async function getBlogPost(slug: string) {
+  // Decode URL-encoded slug
+  const decodedSlug = decodeURIComponent(slug);
   return client.fetch(`
     *[_type == "post" && slug.current == $slug][0] {
       _id,
@@ -35,5 +37,5 @@ export async function getBlogPost(slug: string) {
       category,
       mainImage
     }
-  `, { slug });
+  `, { slug: decodedSlug });
 }
