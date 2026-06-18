@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Linkedin, Instagram, Mail, Download, ArrowDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { personalInfo, cvFilePath } from "@/lib/data";
@@ -83,10 +84,41 @@ export default function Hero() {
           animate="visible"
           className="text-center"
         >
+          {/* Profile Image */}
+          <motion.div variants={itemVariants} className="mb-6">
+            <div className="relative w-40 h-40 mx-auto">
+              {/* Heartbeat rings */}
+              <span className="heartbeat-ring" />
+              <span className="heartbeat-ring" />
+              <span className="heartbeat-ring" />
+
+              {/* Orbiting dots */}
+              <span className="orbit-dot" style={{ animationDelay: "0s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-1s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-2s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-3s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-4s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-5s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-6s" }} />
+              <span className="orbit-dot" style={{ animationDelay: "-7s" }} />
+
+              {/* Image */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+                <Image
+                  src="/images/profile.jpg"
+                  alt={personalInfo.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </motion.div>
+
           {/* Greeting */}
           <motion.p
             variants={itemVariants}
-            className="text-slate-600 dark:text-slate-400 text-lg sm:text-xl mb-4"
+            className="text-slate-600 dark:text-slate-400 text-lg sm:text-xl mb-2"
           >
             Hello, I&apos;m
           </motion.p>

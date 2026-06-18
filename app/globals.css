@@ -58,3 +58,76 @@ body {
 .dark ::selection {
   @apply bg-blue-400 text-slate-900;
 }
+
+/* Orbiting dots animation */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+.heartbeat-ring {
+  animation: heartbeat 4s ease-in-out infinite;
+}
+
+.heartbeat-ring:nth-child(2) {
+  animation-delay: 1s;
+  border-color: #8b5cf6;
+}
+
+.heartbeat-ring:nth-child(3) {
+  animation-delay: 2s;
+  border-color: #06b6d4;
+}
+
+.orbit-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  animation: orbit var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay);
+}
+
+.orbit-dot:nth-child(1) { --orbit-radius: 60px; --orbit-duration: 15s; --orbit-delay: 0s; --dot-size: 4px; }
+.orbit-dot:nth-child(2) { --orbit-radius: 70px; --orbit-duration: 18s; --orbit-delay: -3s; --dot-size: 6px; }
+.orbit-dot:nth-child(3) { --orbit-radius: 80px; --orbit-duration: 20s; --orbit-delay: -6s; --dot-size: 5px; }
+.orbit-dot:nth-child(4) { --orbit-radius: 90px; --orbit-duration: 22s; --orbit-delay: -9s; --dot-size: 3px; }
+.orbit-dot:nth-child(5) { --orbit-radius: 65px; --orbit-duration: 16s; --orbit-delay: -2s; --dot-size: 7px; }
+.orbit-dot:nth-child(6) { --orbit-radius: 75px; --orbit-duration: 19s; --orbit-delay: -5s; --dot-size: 4px; }
+.orbit-dot:nth-child(7) { --orbit-radius: 85px; --orbit-duration: 21s; --orbit-delay: -8s; --dot-size: 5px; }
+.orbit-dot:nth-child(8) { --orbit-radius: 95px; --orbit-duration: 23s; --orbit-delay: -11s; --dot-size: 6px; }
+.orbit-dot:nth-child(9) { --orbit-radius: 68px; --orbit-duration: 17s; --orbit-delay: -4s; --dot-size: 3px; }
+.orbit-dot:nth-child(10) { --orbit-radius: 78px; --orbit-duration: 20s; --orbit-delay: -7s; --dot-size: 5px; }
+.orbit-dot:nth-child(11) { --orbit-radius: 88px; --orbit-duration: 22s; --orbit-delay: -10s; --dot-size: 4px; }
+.orbit-dot:nth-child(12) { --orbit-radius: 98px; --orbit-duration: 24s; --orbit-delay: -13s; --dot-size: 6px; }
+
+.orbit-dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  top: 50%;
+  left: 50%;
+  margin-top: calc(var(--dot-size) / -2);
+  margin-left: calc(var(--dot-size) / -2);
+}
+
+.heartbeat-ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+  animation: heartbeat 4s ease-in-out infinite;
+}
