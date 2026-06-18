@@ -81,6 +81,14 @@ body {
 }
 
 .heartbeat-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
   animation: heartbeat 4s ease-in-out infinite;
 }
 
@@ -96,6 +104,9 @@ body {
 
 .orbit-dot {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   animation: orbit var(--orbit-duration) linear infinite;
