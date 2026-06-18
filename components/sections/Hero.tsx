@@ -86,32 +86,14 @@ export default function Hero() {
         >
           {/* Profile Image */}
           <motion.div variants={itemVariants} className="mb-6">
-            <div className="relative w-40 h-40 mx-auto">
-              {/* Heartbeat rings */}
-              <span className="heartbeat-ring" />
-              <span className="heartbeat-ring" />
-              <span className="heartbeat-ring" />
-
-              {/* Orbiting dots */}
-              <span className="orbit-dot" style={{ animationDelay: "0s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-1s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-2s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-3s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-4s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-5s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-6s" }} />
-              <span className="orbit-dot" style={{ animationDelay: "-7s" }} />
-
-              {/* Image */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
-                <Image
-                  src="/images/profile.jpg"
-                  alt={personalInfo.name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+            <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+              <Image
+                src="/images/profile.jpg"
+                alt={personalInfo.name}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </motion.div>
 
